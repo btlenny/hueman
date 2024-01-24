@@ -1,16 +1,19 @@
 import React from 'react';
-import './CalendarGrid.css'; // Make sure to import the CSS file with the new name
+import './CalendarGrid.css';
 
 const CalendarGrid = () => {
-  const rows = 12;
-  const columns = 31;
+  const months = [
+    'J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D',
+   
+  ];
 
-  // Generate buttons for the grid
+  const daysInMonth = 31;
+
   const generateButtons = () => {
     const buttons = [];
 
-    for (let i = 0; i < rows; i++) {
-      for (let j = 0; j < columns; j++) {
+    for (let i = 0; i < months.length; i++) {
+      for (let j = 0; j < daysInMonth; j++) {
         const buttonKey = `${i}-${j}`;
         buttons.push(<button key={buttonKey} className="responsive-button"></button>);
       }
@@ -20,8 +23,15 @@ const CalendarGrid = () => {
   };
 
   return (
-    <div className="calendar-grid">
-      {generateButtons()}
+    <div className="calendar-container">
+      <div className="row-labels">
+        {months.map((month, index) => (
+          <div key={index} className="row-label">{month}</div>
+        ))}
+      </div>
+      <div className="grid">
+        {generateButtons()}
+      </div>
     </div>
   );
 };
