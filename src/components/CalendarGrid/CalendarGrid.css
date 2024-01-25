@@ -1,48 +1,58 @@
 .calendar-container {
     display: grid;
-    grid-template-columns: minmax(120px, max-content) repeat(31, minmax(10px, 1fr)); /* Adjusted grid-template-columns */
+    grid-template-columns: repeat(32, minmax(14px, 1fr)); /* Adjust the number of columns based on your needs */
     gap: 6px;
-    padding-top: 70px; /* Increased padding-top */
+    padding-top: 50px;
+    padding-left: 250px;
+    padding-right: 250px;
     margin: 0 auto;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    align-items: center; /* Center the grid items vertically */
   }
   
-  
   .column-labels {
+    grid-column: 2 / -1; /* Span across all columns */
     display: grid;
     grid-template-columns: repeat(31, minmax(14px, 1fr));
     gap: 6px;
+    justify-content: center;/* Allow column labels to wrap */
   }
   
   .column-label {
-    text-align: center;
     font-size: 10px;
-    padding-bottom: 8px;
+    padding-right: 10px;
+   /* Allow labels to equally share the available space */
+    text-align: center; /* Center the text within the column label */
   }
   
   .row-labels {
+    grid-column: 1; /* Place at the first column */
     display: grid;
-    gap: 7px;
-    grid-template-rows: repeat(12, auto);
+    flex-direction: column;
+    gap: 6px;
+    align-items: center; /* Center row labels horizontally */
   }
   
   .row-label {
-    text-align: right;
-    font-size: 10px;
+    text-align: center; /* Center the text within the row label */
+    font-size: 9.5px;
     padding-right: 12px;
   }
   
   .grid {
+    grid-column: 2 / -1; /* Exclude the first column for row labels */
     display: grid;
     grid-template-columns: repeat(31, minmax(14px, 1fr));
     gap: 6px;
+    justify-content: center; /* Center the grid items horizontally */
   }
   
-.responsive-button {
-  width: 100%;
-  height: 0;
-  padding-bottom: 100%; /* Maintain square shape */
-  border: 1px solid #ccc;
-  background-color: #fff;
-  box-sizing: border-box;
-  border-radius: 2px;
-}
+  .responsive-button {
+    width: 16px; /* Fixed width */
+    height: 16px; /* Fixed height */
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 2px;
+  }
+  
