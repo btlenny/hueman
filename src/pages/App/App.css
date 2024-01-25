@@ -9,6 +9,12 @@ h1 {
   font-family: "Work Sans", sans-serif;
 }
 
+.App {
+  background-color: rgb(250, 249, 249);
+  width: 100vw;
+  min-height: 100vh;
+}
+
 
 
 

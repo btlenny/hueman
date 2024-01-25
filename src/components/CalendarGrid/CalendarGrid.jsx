@@ -15,7 +15,7 @@ const CalendarGrid = () => {
     for (let i = 0; i < months.length; i++) {
       for (let j = 0; j < daysInMonth; j++) {
         const buttonKey = `${i}-${j}`;
-        buttons.push(<button key={buttonKey} className="responsive-button"></button>);
+        buttons.push(<button key={buttonKey} className="responsive-button transform h-64 bg-slate-500 w-80 transition duration-500 hover:scale-125 hover:bg-slate-300 flex justify-center items-center"></button>);
       }
     }
 
