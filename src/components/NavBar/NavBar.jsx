@@ -2,7 +2,6 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "Bands", href: "/bands", current: false },
   { name: "Login", href: "/bands/new", current: false },
   { name: "Log Out", href: "/", current: false },
 ];
@@ -13,7 +12,7 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <Disclosure as="nav" className="bg-gradient-to-r from-cyan-500 to-blue-500">
+    <Disclosure as="nav" className="">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -38,10 +37,7 @@ export default function Example() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current
-                            ? "bg-gray-900 text-white"
-                            : "text-sky-100 hover:bg-gray-700 hover:text-white",
-                          item.name === "Log Out" && "bg-red-300", // Replace 'bg-red-500' with your desired color
+                          "text-black hover:text-white", // Apply consistent styling to all items
                           "rounded-md px-3 py-2 text-sm font-medium"
                         )}
                         aria-current={item.current ? "page" : undefined}
@@ -62,9 +58,7 @@ export default function Example() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-sky-100 hover:bg-gray-700 hover:text-white",
+                    "text-black hover:text-white", // Apply consistent styling to all items
                     "block rounded-md px-3 py-2 text-base font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}
