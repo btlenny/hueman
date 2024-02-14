@@ -17,11 +17,11 @@ export default function Example() {
     <Disclosure as="nav" className="navbar">
       {({ open }) => (
         <>
-          <div className="font-work mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div className="font-work text-xs mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 font-work text-slate-100 hover:bg-gray-100 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="font-work relative inline-flex items-center justify-center rounded-md p-2 text-xs text-slate-600 hover:bg-gray-100 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -39,8 +39,8 @@ export default function Example() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          "font-work text-slate-400 hover:text-white", // Apply consistent styling to all items
-                          "rounded-md px-3 py-2 text-sm font-medium"
+                          " text-slate-400 text-xs hover:text-white", // Apply consistent styling to all items
+                          "rounded-md px-3 py-2 text-sm font-small"
                         )}
                         aria-current={item.current ? "page" : undefined}
                       >
@@ -52,15 +52,15 @@ export default function Example() {
               </div>
             </div>
           </div>
-          <Disclosure.Panel className="font-work sm:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2">
+          <Disclosure.Panel className=" sm:hidden">
+            <div className="font-work space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
                   as="a"
                   href={item.href}
                   className={classNames(
-                    "font-work text-black hover:text-white", // Apply consistent styling to all items
+                    " text-slate-400 text-xs hover:text-white", // Apply consistent styling to all items
                     "block rounded-md px-3 py-2 text-base font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}
