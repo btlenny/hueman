@@ -3,7 +3,6 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import "./NavBar.css";
 
 const navigation = [
-
   { name: "Login", href: "/bands/new", current: false },
   { name: "Log Out", href: "/", current: false },
 ];

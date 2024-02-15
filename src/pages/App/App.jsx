@@ -1,6 +1,6 @@
-import './App.css';
-import CalendarGrid from '../../components/CalendarGrid/CalendarGrid.jsx';
-import NavBar from '../../components/NavBar/NavBar.jsx';
+import "./App.css";
+import CalendarGrid from "../../components/CalendarGrid/CalendarGrid.jsx";
+import NavBar from "../../components/NavBar/NavBar.jsx";
 
 export default function App() {
   return (
